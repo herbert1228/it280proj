@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>United Christian College</title>
+    <link rel="stylesheet" type="text/css" href="cssIndex.css">
+    <link href="font/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <!--<link href="hover.css" rel="stylesheet" media="all">-->
+    <script type="text/javascript">
+        function displayNextImage() {
+            x = (x === images.length - 1) ? 0 : x + 1;
+            document.getElementById("img").src = images[x];
+        }
+
+        function displayPreviousImage() {
+            x = (x <= 0) ? images.length - 1 : x - 1;
+            document.getElementById("img").src = images[x];
+        }
+
+        function startTimer() {
+            setInterval(displayNextImage, 4000);
+        }
+
+        var images = [], x = -1;
+        images[0] = "images/Okinawa.jpg";
+        images[1] = "images/sportsDay.jpg";
+        images[2] = "images/Okinawa2.jpg";
+        images[3] = "images/studentUnion.JPG";
+    </script>
+</head>
+
+<body onload="startTimer()">
+<div id="wrapper" style="overflow: hidden">
+
+    <div id="header">
+        <div id="headerBar">
+            <div id="headerBarBox">
+                <div id="headerBarTable">
+                    <a href="http://eclass.ucc.edu.hk/templates/" class="headerButton">eClass</a>
+                    <a href="#" class="headerButton">ENGLISH</a>
+                    <a href="#" class="headerButton">中文</a>
+                </div>
+            </div>
+        </div>
+        <nav id="headerNav">
+            <div id="headerNavBox">
+                <div id="headerNavLogo">
+                    <a href="index.html"><img src="images/menu_header.gif" width="78" height="66"
+                                              style="margin-top: 5px"></a>
+                    <div id="headerNavLogoText">
+                        <a href="index.html" class="headerButton"><p>United Christian College</p></a>
+                        <a href="index.html" class="headerButton"><p style="font-size: smaller; font-weight: bold">
+                            匯基書院</p></a>
+                    </div>
+                </div>
+                <div id="headerNavTable">
+                    <ul id="headerNavTableList">
+                        <li><a class="headerButton hvr-icon-hang" href="introduction.html">學校介紹</a></li>
+                        <li><a class="headerButton hvr-icon-hang" href="courseInfo.html">課程資料</a></li>
+                        <li><a class="headerButton hvr-icon-hang" href="studentLife.html">學生生活</a></li>
+                        <li><a class="headerButton hvr-icon-hang" href="admission.html">申請入學</a></li>
+                        <li><a class="headerButton hvr-icon-hang" href="contactUs.html">聯絡我們</a></li>
+                    </ul>
+                </div>
+                </div>
+            </nav>
+        </div>
+
+    <div id="content">
+        <img id="img" width="100%" style="position: relative" src="images/studentUnion.JPG"/>
+        <div style="position: absolute">
+
+        </div>
+    </div>
+
+    <div id="footer">
+        <div id="footerNews">
+            <div id="footerNewsContent">
+                <div class="footerNewsTitle">匯基新聞</div>
+                <div id="footerNewsContent1">
+                    <a class="footerNewsContentLink" href="http://ucc.edu.hk/showfrontpage.asp?id=1163">1617全方位學習周(10-12/4/2017)</a>
+                    <a class="footerNewsContentLink" href="http://ucc.edu.hk/showfrontpage.asp?id=1160">「麥兜‧豬肉在前」香港撒瑪利亞防止自殺會慈善跑</a>
+                    <a class="footerNewsContentLink" href="http://ucc.edu.hk/showfrontpage.asp?id=1159">參觀教大體育系</a>
+                    <a class="footerNewsContentLink" href="http://ucc.edu.hk/showfrontpage.asp?id=1157">訪問報導:男生讀STEM科為女生3倍,女生能力不足還是性別定型？</a>
+                    <a class="footerNewsContentLink" href="http://ucc.edu.hk/showfrontpage.asp?id=1156">滙基創新科技周.STEM
+                        Week</a>
+                </div>
+                <div id="footerNewsContentButton">
+                    <button class="hvr-icon-back invisibleButton" style="margin-top: 10px">左一頁</button>
+                    <button class="hvr-icon-forward invisibleButton" style="margin-top: 10px;float:right">右一頁</button>
+                </div>
+                <div class="footerNewsTitle">學校通告</div>
+                <div id="footerNewsContent2">
+                    <a class="footerNewsContentLink" href="http://ucc.edu.hk/shownotice.asp?course_id=M003&id=3069">有關惡劣天氣事宜</a>
+                    <a class="footerNewsContentLink" href="http://ucc.edu.hk/shownotice.asp?course_id=M003&id=3066">中一至中五級『家長日』通告</a>
+                    <a class="footerNewsContentLink" href="http://ucc.edu.hk/shownotice.asp?course_id=M003&id=3063">全方位學習周事宜</a>
+                    <a class="footerNewsContentLink" href="http://ucc.edu.hk/shownotice.asp?course_id=M003&id=3057">下學期測驗周事宜</a>
+                    <a class="footerNewsContentLink" href="http://ucc.edu.hk/shownotice.asp?course_id=M003&id=3055">有關中六同學畢業事宜</a>
+                </div>
+            </div>
+        </div>
+        <div id="footer1">
+            <div id="footer1Box">
+                <div id="footer1BoxLeft">
+                    <p style="font-weight: bold">United Christian College</p>
+                    <p>11 Tong Yam St, Kowloon Tong, Hong Kong</p>
+                    <div id="footer1BoxLeftContact">
+                        <div>
+                            <img style="vertical-align:middle" src="images/phone.png">
+                            <span style="">(852) 2777-8344</span>
+                        </div>
+                        <div>
+                            <img style="vertical-align:middle" src="images/fax.png">
+                            <span style="">(852) 2788-2116</span>
+                        </div>
+                    </div>
+                </div>
+                <div id="footer1BoxRight">
+                    <a class="headerButton" href="contactUs.html">Contact Us</a>
+                    <a class="headerButton" href="#">Something Here</a>
+                    <a class="headerButton" href="#">Something Here</a>
+                </div>
+            </div>
+        </div>
+        <div id="footer2">
+            <br><br>
+            <p align="center">Copyright © 2017 United Christian College</p>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
