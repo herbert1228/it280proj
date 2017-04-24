@@ -16,6 +16,11 @@ a {
     text-decoration: none;
 }
 
+.alignDivCenter{
+    margin-left: auto;
+    margin-right: auto;
+}
+
 #wrapper {
     min-height: 100%;
     /* 位置設為relative, 作為footer區塊位置的參考 */
@@ -166,13 +171,13 @@ a {
     padding-top: 20px;
 }
 
-#footerNewsContent {
+.footerNewsContent {
     display: flex;
     flex-flow: column;
     justify-content: space-around;
 }
 
-#footerNewsContent1, #footerNewsContent2 {
+.footerNewsContent1, .footerNewsContent2 {
     display: flex;
     flex-flow: row;
     justify-content: space-around;
@@ -194,7 +199,7 @@ a {
     text-align: center;
 }
 
-#footerNewsContentButton {
+.footerNewsContentButton {
     display: inline-block;
     text-decoration: none;
 }
