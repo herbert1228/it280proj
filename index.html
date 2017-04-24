@@ -27,9 +27,9 @@
         images[2] = "images/Okinawa2.jpg";
         images[3] = "images/studentUnion.JPG";
 
-        var div=[];
-        div[0] = document.createElement("div[1]");
-        div[1].innerHTML=
+        var div=[], y=0;
+        div[0] = "";
+        div[0]=
             '<div class="footerNewsTitle">匯基新聞</div>'+
             '<div class="footerNewsContent1">'+
                 '<a class="footerNewsContentLink" href="http://ucc.edu.hk/showfrontpage.asp?id=1163">1617全方位學習周(10-12/4/2017)</a>'+
@@ -39,10 +39,6 @@
                 '<a class="footerNewsContentLink" href="http://ucc.edu.hk/showfrontpage.asp?id=1156">滙基創新科技周.STEM'+
                 'Week</a>'+
             '</div>'+
-            '<div class="footerNewsContentButton">'+
-                '<button onclick="changeDivLeft()" class="hvr-icon-back invisibleButton" style="margin-top: 10px">左一頁</button>'+
-                '<button onclick="changeDivRight()" class="hvr-icon-forward invisibleButton" style="margin-top: 10px;float:right">右一頁</button>'+
-            '</div>'+
             '<div class="footerNewsTitle" style="padding-top: 10px">學校通告</div>'+
             '<div class="footerNewsContent2">'+
                 '<a class="footerNewsContentLink" href="http://ucc.edu.hk/shownotice.asp?course_id=M003&id=3069">有關惡劣天氣事宜</a>'+
@@ -51,70 +47,86 @@
                 '<a class="footerNewsContentLink" href="http://ucc.edu.hk/shownotice.asp?course_id=M003&id=3057">下學期測驗周事宜</a>'+
                 '<a class="footerNewsContentLink" href="http://ucc.edu.hk/shownotice.asp?course_id=M003&id=3055">有關中六同學畢業事宜</a>'+
             '</div>'+
-            '<div class="alignDivCenter" style="padding-top: 15px">'+
-                '<p style="font-size: smaller; color:#707070">page 1/3</p>'+
+            '<div style="padding-top: 15px;height: 50px; width: 100%; display: flex; flex-flow: row; justify-content: space-around">'+
+            '<button onclick="changeDivLeft()" class="hvr-icon-back invisibleButton">左一頁</button>'+
+            '<p style="font-size: smaller; color:#707070;margin-top: 18px">page 1/4</p>'+
+            '<button onclick="changeDivRight()" class="hvr-icon-forward invisibleButton" style="float:right">右一頁</button>'+
             '</div>';
 
-        div[2] = document.createElement("div[2]");
-        div[2].innerHTML=
-            '<div class="footerNewsTitle">匯基新聞</div>'+
+        div[1] = "";
+        div[1]=
+            '<div class="footerNewsTitle">匯基活動</div>'+
             '<div class="footerNewsContent1">'+
-            '<a class="footerNewsContentLink" href="http://ucc.edu.hk/showfrontpage.asp?id=1163">1617全方位學習周(10-12/4/2017)</a>'+
-            '<a class="footerNewsContentLink" href="http://ucc.edu.hk/showfrontpage.asp?id=1160">「麥兜‧豬肉在前」香港撒瑪利亞防止自殺會慈善跑</a>'+
-            '<a class="footerNewsContentLink" href="http://ucc.edu.hk/showfrontpage.asp?id=1159">參觀教大體育系</a>'+
-            '<a class="footerNewsContentLink" href="http://ucc.edu.hk/showfrontpage.asp?id=1157">訪問報導:男生讀STEM科為女生3倍,女生能力不足還是性別定型？</a>'+
-            '<a class="footerNewsContentLink" href="http://ucc.edu.hk/showfrontpage.asp?id=1156">滙基創新科技周.STEM'+
-            'Week</a>'+
+            '<a class="footerNewsContentLink" href="http://ucc.edu.hk/shownotice.asp?id=3068">香港紅十字會-急救進階證書課程(單元一)-急救技術深化認識</a>'+
+            '<a class="footerNewsContentLink" href="http://ucc.edu.hk/shownotice.asp?id=3062">香港科技大學-2017-暑期學院</a>'+
+            '<a class="footerNewsContentLink" href="http://ucc.edu.hk/shownotice.asp?id=3059">《育醫造才：探索醫學世界》2017公開講座</a>'+
+            '<a class="footerNewsContentLink" href="http://ucc.edu.hk/shownotice.asp?id=3058">香港花卉展覽-2017</a>'+
             '</div>'+
-            '<div class="footerNewsContentButton">'+
-            '<button onclick="changeDivLeft()" class="hvr-icon-back invisibleButton" style="margin-top: 10px">左一頁</button>'+
-            '<button onclick="changeDivRight()" class="hvr-icon-forward invisibleButton" style="margin-top: 10px;float:right">右一頁</button>'+
-            '</div>'+
-            '<div class="footerNewsTitle" style="padding-top: 10px">學校通告</div>'+
+            '<div class="footerNewsTitle" style="padding-top: 10px">擂台陣</div>'+
             '<div class="footerNewsContent2">'+
-            '<a class="footerNewsContentLink" href="http://ucc.edu.hk/shownotice.asp?course_id=M003&id=3069">有關惡劣天氣事宜</a>'+
-            '<a class="footerNewsContentLink" href="http://ucc.edu.hk/shownotice.asp?course_id=M003&id=3066">中一至中五級『家長日』通告</a>'+
-            '<a class="footerNewsContentLink" href="http://ucc.edu.hk/shownotice.asp?course_id=M003&id=3063">全方位學習周事宜</a>'+
-            '<a class="footerNewsContentLink" href="http://ucc.edu.hk/shownotice.asp?course_id=M003&id=3057">下學期測驗周事宜</a>'+
-            '<a class="footerNewsContentLink" href="http://ucc.edu.hk/shownotice.asp?course_id=M003&id=3055">有關中六同學畢業事宜</a>'+
+            '<a class="footerNewsContentLink" href="http://ucc.edu.hk/showfrontpage.asp?id=1162">3月份 借閱龍虎榜</a>'+
+            '<a class="footerNewsContentLink" href="http://ucc.edu.hk/showfrontpage.asp?id=1158">2月份 借閱龍虎榜</a>'+
+            '<a class="footerNewsContentLink" href="http://ucc.edu.hk/showfrontpage.asp?id=1155">12-1月份 借閱龍虎榜</a>'+
+            '<a class="footerNewsContentLink" href="http://ucc.edu.hk/showfrontpage.asp?id=1148">11月份 借閱龍虎榜</a>'+
+            '<a class="footerNewsContentLink" href="http://ucc.edu.hk/showfrontpage.asp?id=1146">10月份 借閱龍虎榜</a>'+
             '</div>'+
-            '<div class="alignDivCenter" style="padding-top: 15px">'+
-            '<p style="font-size: smaller; color:#707070">page 1/3</p>'+
+            '<div style="padding-top: 15px;height: 50px; width: 100%; display: flex; flex-flow: row; justify-content: space-around">'+
+            '<button onclick="changeDivLeft()" class="hvr-icon-back invisibleButton">左一頁</button>'+
+            '<p style="font-size: smaller; color:#707070;margin-top: 18px">page 2/4</p>'+
+            '<button onclick="changeDivRight()" class="hvr-icon-forward invisibleButton" style="float:right">右一頁</button>'+
             '</div>';
 
-        div[3] = document.createElement("div[3]");
-        div[3].innerHTML=
-            '<div class="footerNewsTitle">匯基新聞</div>'+
-            '<div class="footerNewsContent1">'+
-            '<a class="footerNewsContentLink" href="http://ucc.edu.hk/showfrontpage.asp?id=1163">1617全方位學習周(10-12/4/2017)</a>'+
-            '<a class="footerNewsContentLink" href="http://ucc.edu.hk/showfrontpage.asp?id=1160">「麥兜‧豬肉在前」香港撒瑪利亞防止自殺會慈善跑</a>'+
-            '<a class="footerNewsContentLink" href="http://ucc.edu.hk/showfrontpage.asp?id=1159">參觀教大體育系</a>'+
-            '<a class="footerNewsContentLink" href="http://ucc.edu.hk/showfrontpage.asp?id=1157">訪問報導:男生讀STEM科為女生3倍,女生能力不足還是性別定型？</a>'+
-            '<a class="footerNewsContentLink" href="http://ucc.edu.hk/showfrontpage.asp?id=1156">滙基創新科技周.STEM'+
-            'Week</a>'+
+        div[2] = "";
+        div[2]=
+            '<div class="footerNewsTitle">好書介紹</div>'+
+            '<div class="footerNewsContent1" style="padding-top: 25px">'+
+            '<a class="footerNewsContentLink" href="http://ucc.edu.hk/showfrontpage.asp?id=1161">小屋</a>'+
+            '<a class="footerNewsContentLink" href="http://ucc.edu.hk/showfrontpage.asp?id=1144">多走一步</a>'+
+            '<a class="footerNewsContentLink" href="http://ucc.edu.hk/shownotice.asp?id=3058">香港花卉展覽-2017</a>'+
             '</div>'+
-            '<div class="footerNewsContentButton">'+
-            '<button onclick="changeDivLeft()" class="hvr-icon-back invisibleButton" style="margin-top: 10px">左一頁</button>'+
-            '<button onclick="changeDivRight()" class="hvr-icon-forward invisibleButton" style="margin-top: 10px;float:right">右一頁</button>'+
+            '<div class="footerNewsContent2" style="padding-top: 25px">'+
+            '<a class="footerNewsContentLink" href="http://ucc.edu.hk/showfrontpage.asp?id=1162">3月份 借閱龍虎榜</a>'+
+            '<a class="footerNewsContentLink" href="http://ucc.edu.hk/showfrontpage.asp?id=1158">2月份 借閱龍虎榜</a>'+
             '</div>'+
-            '<div class="footerNewsTitle" style="padding-top: 10px">學校通告</div>'+
-            '<div class="footerNewsContent2">'+
-            '<a class="footerNewsContentLink" href="http://ucc.edu.hk/shownotice.asp?course_id=M003&id=3069">有關惡劣天氣事宜</a>'+
-            '<a class="footerNewsContentLink" href="http://ucc.edu.hk/shownotice.asp?course_id=M003&id=3066">中一至中五級『家長日』通告</a>'+
-            '<a class="footerNewsContentLink" href="http://ucc.edu.hk/shownotice.asp?course_id=M003&id=3063">全方位學習周事宜</a>'+
-            '<a class="footerNewsContentLink" href="http://ucc.edu.hk/shownotice.asp?course_id=M003&id=3057">下學期測驗周事宜</a>'+
-            '<a class="footerNewsContentLink" href="http://ucc.edu.hk/shownotice.asp?course_id=M003&id=3055">有關中六同學畢業事宜</a>'+
-            '</div>'+
-            '<div class="alignDivCenter" style="padding-top: 15px">'+
-            '<p style="font-size: smaller; color:#707070">page 1/3</p>'+
+            '<div style="padding-top: 24px;height: 50px; width: 100%; display: flex; flex-flow: row; justify-content: space-around">'+
+            '<button onclick="changeDivLeft()" class="hvr-icon-back invisibleButton">左一頁</button>'+
+            '<p style="font-size: smaller; color:#707070;margin-top: 18px">page 3/4</p>'+
+            '<button onclick="changeDivRight()" class="hvr-icon-forward invisibleButton" style="float:right">右一頁</button>'+
             '</div>';
-        
-        function changeDivLeft(){
-            document.getElementById('footerNewsContentToSwitch').innerHTML=div1.innerHTML;
-        }
+
+        div[3] = "";
+        div[3]=
+            '<div class="footerNewsTitle">讀一讀</div>'+
+            '<table align="center" width="100%" border="0">'+
+            '<tbody><tr align="center">'+
+            '<td valign="top" align="center">'+
+            '<a href="http://tvnews.hkedcity.net/public/Default.aspx" target="_blank"><img src="images/tv_news.jpg" width="150" height="45" border="1" alt="English TV News"></a>'+
+            '<a href="http://ssucc.wisenews.net?groupId=SSUCC&amp;userName=teacher&amp;password=wiseucc" target="_blank"><img src="images/wisesearch_logo.gif" width="150" height="45" border="1"></a>'+
+            '<a href="http://www.organdonation.gov.hk" target="_blank"><img src="images/organdonation.jpg" width="150" height="45" border="1" alt="Organ Donation"></a><br>'+
+            '<a href="http://www.ucc.edu.hk/upload/s033/subject/s3/uccmedia" target="_blank"><img src="images/3Cmedia.jpg" width="150" height="45" border="1" alt="3C 媒體教育"></a>'+
+            '<a href="http://334.edb.hkedcity.net" target="_blank"><img width="150" height="45" border="1" src="images/334.gif"></a>'+
+            '<a href="http://oledb.edb.hkedcity.net" target="_blank"><img src="oledbbanner.jpg" width="150" height="45" alt="images/教育局其他學習經歷活動資料庫" border="1"></a> <br>'+
+            '<a href="http://www.ucc.edu.hk/low_carbon.htm" target="_blank"><img src="images/low_carbon.jpg" width="460" height="45px" border="1" alt="e-Reading"></a>'+
+            '</td>'+
+            '</tr>'+
+            '</tbody></table>'+
+
+            '<div style="padding-top: 1px;height: 25px; width: 100%; display: flex; flex-flow: row; justify-content: space-around">'+
+            '<button onclick="changeDivLeft()" class="hvr-icon-back invisibleButton">左一頁</button>'+
+            '<p style="font-size: smaller; color:#707070;margin-top:6px">page 4/4</p>'+
+            '<button onclick="changeDivRight()" class="hvr-icon-forward invisibleButton" style="float:right">右一頁</button>'+
+            '</div>';
 
         function changeDivRight(){
+            y = (y === div.length - 1) ? 0 : y + 1;
+            document.getElementById('footerNewsContentToSwitch').innerHTML=
+                div[y];
+        }
 
+        function changeDivLeft(){
+            y = (y <= 0) ? div.length - 1 : y - 1;
+            document.getElementById('footerNewsContentToSwitch').innerHTML=
+                div[y];
         }
     </script>
 </head>
@@ -146,7 +158,15 @@
                 </div>
                 <div id="headerNavTable">
                     <ul id="headerNavTableList">
-                        <li><a class="headerButton hvr-icon-hang" href="introduction/introduction.html">學校介紹</a></li>
+                        <li>
+                            <a class="headerButton hvr-icon-hang" href="introduction/introduction.html">學校介紹</a>
+                            <!--<button class="headerButton hvr-icon-hang dropBtn">學校介紹</button>-->
+                            <!--<div class="dropdown-content">-->
+                                <!--<a href="#">Link 1</a>-->
+                                <!--<a href="#">Link 2</a>-->
+                                <!--<a href="#">Link 3</a>-->
+                            <!--</div>-->
+                        </li>
                         <li><a class="headerButton hvr-icon-hang" href="courseInfo/courseInfo.html">課程資料</a></li>
                         <li><a class="headerButton hvr-icon-hang" href="studentLife/studentLife.html">學生生活</a></li>
                         <li><a class="headerButton hvr-icon-hang" href="admission/admission.html">申請入學</a></li>
@@ -176,10 +196,6 @@
                     <a class="footerNewsContentLink" href="http://ucc.edu.hk/showfrontpage.asp?id=1156">滙基創新科技周.STEM
                         Week</a>
                 </div>
-                <div class="footerNewsContentButton">
-                    <button onclick="changeDivLeft()" class="hvr-icon-back invisibleButton" style="margin-top: 10px">左一頁</button>
-                    <button onclick="changeDivRight()" class="hvr-icon-forward invisibleButton" style="margin-top: 10px;float:right">右一頁</button>
-                </div>
                 <div class="footerNewsTitle" style="padding-top: 10px">學校通告</div>
                 <div class="footerNewsContent2">
                     <a class="footerNewsContentLink" href="http://ucc.edu.hk/shownotice.asp?course_id=M003&id=3069">有關惡劣天氣事宜</a>
@@ -188,8 +204,12 @@
                     <a class="footerNewsContentLink" href="http://ucc.edu.hk/shownotice.asp?course_id=M003&id=3057">下學期測驗周事宜</a>
                     <a class="footerNewsContentLink" href="http://ucc.edu.hk/shownotice.asp?course_id=M003&id=3055">有關中六同學畢業事宜</a>
                 </div>
-                <div class="alignDivCenter" style="padding-top: 15px">
-                    <p style="font-size: smaller; color:#707070">page 1/3</p>
+                <div style="padding-top: 15px;height: 50px; width: 100%; display: flex; flex-flow: row; justify-content: space-around">
+                    <button onclick="changeDivLeft()" class="hvr-icon-back invisibleButton">左一頁</button>
+                    <!--<div class="alignDivCenter">-->
+                        <p style="font-size: smaller; color:#707070;margin-top: 18px">page 1/4</p>
+                    <!--</div>-->
+                    <button onclick="changeDivRight()" class="hvr-icon-forward invisibleButton" style="float:right">右一頁</button>
                 </div>
             </div>
         </div>
