@@ -124,7 +124,7 @@ a {
      width: 100%;
      box-sizing: border-box;
      position: absolute;
-     bottom: -250px;
+     bottom: -50px;
  }
 
 #footerNews {
@@ -262,7 +262,7 @@ a {
     /*background: transparent;*/
     /*border: none !important;*/
     /*font-size:0;*/
-    background: white;
+    background: transparent;
     border: white;
 }
 
