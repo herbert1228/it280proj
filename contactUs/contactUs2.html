@@ -8,7 +8,49 @@
     <link href="../font/css/font-awesome.min.css" rel="stylesheet" media="all">
     <!--<link href="hover.css" rel="stylesheet" media="all">-->
 </head>
+<style>
+    .dropbtn {
+        background-color: #4CAF50;
+        color: white;
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+    }
 
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #3e8e41;
+}
+
+.dropdown {
+    float: right;
+    position: relative;
+    display: inline-block;
+    
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    right: 0;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover {background-color: #f1f1f1}
+
+.show {display:block;}
+</style>
 <body>
 <div id="wrapper">
 
@@ -39,7 +81,7 @@
                         <li><a class="headerButton hvr-icon-hang" href="../introduction/introduction.html">學校介紹</a></li>
                         <li><a class="headerButton hvr-icon-hang" href="../courseInfo/courseInfo.html">課程資料</a></li>
                         <li><a class="headerButton hvr-icon-hang" href="../studentLife/studentLife.html">學生生活</a></li>
-                        <li><a class="headerButton hvr-icon-hang" href="../admission/admission.html">申請入學</a></li>
+                        <li><a class="headerButton hvr-icon-hang" href="../admission/admission.html">家長園地</a></li>
                         <li><a class="headerButton hvr-icon-hang" href="contactUs.html">聯絡我們</a></li>
                     </ul>
                 </div>
@@ -47,28 +89,32 @@
         </nav>
     </div>
 
-    <div id="content">
-        <img id="img" width="100%" height="220" style="position: relative" src="../images/background.jpg"/>
-        <div id="contentArea">
-            <div id="contentAreaBox">
-                <div id="contentAreaBoxLeft">
-                    <div id="contentAreaBoxLeftTable">
-                        <ul id="contentAreaBoxLeftTableList">
-                            <li><p style="color: #379f45; font-weight: bolder; font-size: medium; float: right">聯絡我們</p>
-                            </li>
-                            <li><a href="contactUs.html" class="contentAreaBoxLeftTableButton">學校地址</a></li>
-                            <li><a href="contactUs1.html" class="contentAreaBoxLeftTableButton">電郵</a></li>
-                            <li><a href="contactUs2.html" class="contentAreaBoxLeftTableButtonCurrent">電話號碼</a></li>
-                            <li><a href="contactUs3.html" class="contentAreaBoxLeftTableButton">傳真號碼</a></li>
-                        </ul>
-                    </div>
+<div id="content">
+    <img id="img" width="100%" height="220" style="position: relative" src="../images/background.jpg"/>
+    <div id="contentArea">
+        <div id="contentAreaBox">
+            <div id="contentAreaBoxLeft">
+                <div id="contentAreaBoxLeftTable" style="height: 166px"> <!--change table size here-->
+                    <ul id="contentAreaBoxLeftTableList">
+                        <li><p style="color: #379f45; font-weight: bolder; font-size: medium; float: right">聯絡我們</p>
+                        </li>
+                        <li><a href="contactUs.html" class="contentAreaBoxLeftTableButtonCurrent">學校資料</a></li>
+                        <li><a href="contactUs1.html" class="contentAreaBoxLeftTableButton">校友會</a></li>
+                        <li><a href="contactUs2.html" class="contentAreaBoxLeftTableButton">考測範圍時間表</a></li>
+                    </ul>
                 </div>
+            </div>
                 <div id="contentAreaBoxRight">
                     <div id="contentAreaBoxRightTitle">
-                        <p>電話號碼</p>
+                        <p>考測範圍時間表</p>
                     </div>
-                    <div id="contentAreaBoxRightForm">
-                        <p>Add things here</p>
+                    <div class="dropdown">
+                        <button onclick="myFunction()" class="dropbtn">Select Form</button>
+                        <div id="myDropdown" class="dropdown-content">
+                            <a href="exam.html">S4</a>
+                            <a href="exam1.html">S5</a>
+                            <a href="exam2.html">S6</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -109,5 +155,28 @@
     </div>
 
 </div>
+
+<script>
+    
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+
+window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+        
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+            }
+        }
+    }
+}
+</script>
+
 </body>
 </html>
